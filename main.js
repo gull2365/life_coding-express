@@ -20,8 +20,8 @@ app.get("/", function (req, res) {
   });
 });
 
-app.get("/page", function (req, res) {
-  res.send("/page");
+app.get("/page/:pageId", function (req, res) {
+  res.send(req.params);
 });
 
 app.listen(3000, () => console.log("Example app listening on port 3000!"));
